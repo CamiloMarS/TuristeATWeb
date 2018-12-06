@@ -1,0 +1,25 @@
+.boxItem {
+  width: 120px;
+  height: 150px;
+  background: rgb(155, 155, 155);
+  border-radius: 5px;
+  box-shadow: 2px 1px 3px rgb(192, 186, 186);
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px;
+}
+
+.boxItem-title {
+  text-shadow: 1px 1px 5px rgb(240, 235, 235);
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.boxItem:active {
+  background: rgb(170, 192, 212);
+}
