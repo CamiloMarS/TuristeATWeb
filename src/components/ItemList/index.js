@@ -13,9 +13,9 @@ const Icons = {
 
 const ItemList = ({ data, id }) => {
   return (
-    <ListItem id={id}>
+    <ListItem button id={id}>
       <ListItemIcon>{id % 2 > 0 ? Icons.start : Icons.arrow}</ListItemIcon>
-      <ListItemText>{data.text}</ListItemText>
+      <ListItemText>{data.name}</ListItemText>
     </ListItem>
   );
 };

@@ -3,6 +3,7 @@ import Drawer from "@material-ui/core/Drawer";
 import { IconButton, Divider } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import "./style.css";
 
 const getIconClose = type => {
   if (type === "right") {
@@ -13,7 +14,12 @@ const getIconClose = type => {
 
 class TDrawer extends React.Component {
   handleClose = () => {
-    console.log("Cerrando oh yeah!");
+    //Cerrar el Drawer
+    this.props.closeTDrawer({ close: false });
+  };
+
+  iconCloseOrientation = orientation => {
+    return orientation === "left" ? "right" : "left";
   };
 
   render() {
@@ -24,9 +30,13 @@ class TDrawer extends React.Component {
           anchor={this.props.orientation}
           open={this.props.open}
         >
-          <div className="drawerHeader">
+          <div
+            className={`drawerHeader icon${this.iconCloseOrientation(
+              this.props.orientation
+            )}`}
+          >
             <IconButton onClick={this.handleClose}>
-              {getIconClose("right")}
+              {getIconClose(this.props.orientation)}
             </IconButton>
           </div>
           <Divider />

@@ -1,0 +1,12 @@
+.drawerHeader {
+  display: flex;
+  align-items: center;
+}
+
+.iconright {
+  justify-content: flex-end;
+}
+
+.iconleft {
+  justify-content: flex-start;
+}

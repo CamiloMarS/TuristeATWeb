@@ -35,18 +35,22 @@ class Main extends Component {
     this.setState({ open: drawerOpen });
   };
 
+  closeLateralPanel = information => {
+    const { close } = information;
+    this.setState({ open: close });
+  };
+
   render() {
     return (
       <Router>
         <div style={{ ...main }}>
           <TopBar title="Drawer Title" getStatusDrawer={this.getStatusDrawer} />
-          <TDrawer open={this.state.open} orientation="left">
-            <TList
-              collection={[
-                { id: 0, text: "otro" },
-                { id: 1, text: "Otro más" }
-              ]}
-            />
+          <TDrawer
+            open={this.state.open}
+            orientation="right"
+            closeTDrawer={this.closeLateralPanel}
+          >
+            <TList collection={directorio()} />
           </TDrawer>
         </div>
       </Router>
