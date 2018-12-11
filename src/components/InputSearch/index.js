@@ -5,26 +5,28 @@ const _styls = {
   div: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    padding: "0 4px"
   },
   input: {
-    padding: "10px !important",
-    border: "none"
+    border: "none",
+    height: "4vh",
+    width: "100%"
   }
 };
 
 const InputSearch = ({ getValueInput }) => {
   return (
     <div style={_styls.div}>
-      <span>
-        <Search size="high" />
-      </span>
       <input
         type="text"
         placeholder="Busque desde aquí..."
         onKeyUp={getValueInput}
         style={_styls.input}
       />
+      <span>
+        <Search style={{ fontSize: "28px" }} />
+      </span>
     </div>
   );
 };

@@ -22,7 +22,7 @@ export const directorio = () => {
     },
     {
       cod: "TUR-CNS",
-      name: "Conocenos"
+      name: "Nosotros"
     }
   ];
 };
