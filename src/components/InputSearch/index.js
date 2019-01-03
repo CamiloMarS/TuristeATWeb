@@ -1,18 +1,31 @@
 import React from "react";
+import Radium from 'radium';
 import Search from "@material-ui/icons/Search";
 
 const _styls = {
   div: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-around",
     padding: "0 4px"
   },
   input: {
     border: "none",
     height: "4vh",
     width: "100%"
-  }
+  },
+   bntSearch: {
+     width: "25px",
+     height: "25px",
+     padding: "5px",
+     marginLeft:"5px",
+     cursor: "pointer",
+     ':hover': {
+       backgroundColor: "rgba(0,0,0,.4)",
+       borderRadius: "50%",
+       color:"#fff"
+     }
+   }
 };
 
 const InputSearch = ({ getValueInput }) => {
@@ -24,11 +37,11 @@ const InputSearch = ({ getValueInput }) => {
         onKeyUp={getValueInput}
         style={_styls.input}
       />
-      <span>
-        <Search style={{ fontSize: "28px" }} />
+      <span style={_styls.bntSearch}>
+        <Search />
       </span>
     </div>
   );
 };
 
-export default InputSearch;
+export default Radium(InputSearch);

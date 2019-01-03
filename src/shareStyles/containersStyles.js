@@ -17,3 +17,8 @@ export const menuOptions = {
   width: "100%",
   background: "#ccc"
 };
+
+export const rootContent = {
+  marginTop: "10vh",
+  backgroundColor: ""
+}

@@ -2,11 +2,11 @@ import React from "react";
 import List from "@material-ui/core/List";
 import ItemList from "../ItemList/index";
 
-const TList = ({ collection }) => {
+const TList = ({ collection, itemAction }) => {
   return (
     <List>
       {collection.map((item, i) => (
-        <ItemList data={item} key={i} id={i} />
+        <ItemList data={item} key={i} id={i} dispatchPageSelected={itemAction}/>
       ))}
     </List>
   );

@@ -1,50 +1,53 @@
 import React from "react";
 import { Route } from "react-router-dom";
+/** My components **/
 import HomeContainer from "../containers/HomeContainer";
 import MagicTownsContainer from "../containers/magicTows-container";
 import TuristAttractionsContainer from "../containers/TuristAttraction";
 
-const enlaces = {
-  "TUR-INO": {
+const _CONTAINERS = [
+  {
+    cod: "TUR-INO",
     href: "home",
-    container: <HomeContainer />
+    container: HomeContainer
   },
-  "TUR-PBS": {
+  {
+    cod: "TUR-PBS",
     href: "magictowns",
-    container: <MagicTownsContainer />
+    container: MagicTownsContainer
   },
-  "TUR-HRS": {
+  {
+    cod: "TUR-HRS",
     href: "hoteles-restaurantes",
     container: null
   },
-  "TUR-MYL": {
+  {
+    cod: "TUR-MYL",
     href: "mitos-leyendas",
     container: null
   },
-  "TUR-CNS": {
+  {
+    cod: "TUR-CNS",
     href: "nosotros",
     container: null
   },
-  "TUR-ZLA": {
+  {
+    cod: "TUR-ZLA",
     href: "atraciones",
-    container: <TuristAttractionsContainer />
-  }
-};
-
-const findRoute = page => {
-  return enlaces.hasOwnProperty(page) ? enlaces[page] : null;
-};
+    container: TuristAttractionsContainer
+  }];
+const findRoute = page => _CONTAINERS.find(container => page === container.cod);
 
 const Root = ({ link }) => {
   try {
     let queryResult = findRoute(link);
     if (queryResult !== null) {
-      const { href, container } = queryResult;
-      return <Route path={`/${href}`} component={container} />;
+      const { cod, container } = queryResult;
+      return <Route path={`/${cod}`}  component={container} />;
     }
   } catch (error) {
-    console.log("Error => ", error);
+    console.log("Error route => ", error);
+    return <Route path={"/home"} component={HomeContainer}></Route>
   }
 };
-
 export default Root;

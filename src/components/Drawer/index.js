@@ -14,7 +14,6 @@ const getIconClose = type => {
 
 class TDrawer extends React.Component {
   handleClose = () => {
-    //Cerrar el Drawer
     this.props.closeTDrawer({ close: false });
   };
 

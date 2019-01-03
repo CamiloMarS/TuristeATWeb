@@ -1,0 +1,28 @@
+.cardHotelRs {
+  position: relative;
+  width:250px;
+  background: #ccc;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.cardHotelRs > div {
+  position: absolute;
+  background: rgba(0,0,0,.4);
+  min-height: 5vh;
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 0px 0px 1px #000;
+  font-weight: bolder;
+}
+
+.cardHRImage {
+  width: 100%;
+  height: 100%;}

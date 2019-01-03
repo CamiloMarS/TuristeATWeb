@@ -1,0 +1,14 @@
+.CardActionArea{
+  margin: 5px;
+  width:"260px";
+}
+
+
+
+
+.ocultar:hover {
+  opacity: 0.01;
+}
+/* .CardActionArea:hover {
+    background: rgba(0,0,0,0.1);
+} */
