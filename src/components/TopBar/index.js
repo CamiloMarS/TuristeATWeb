@@ -13,7 +13,13 @@ import Logo from "../../components/Logo";
 const _styles = {
   flex: {
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-beetwen"
+  },
+  spaceBetween2: {
+    width: "50%",
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center"
   },
   spaceBetween: {
     width: "50%",
@@ -42,10 +48,12 @@ class TopBar extends React.Component {
     return (
       <AppBar>
         <Toolbar disableGutters={openDrawer} style={_styles.flex}>
-          <Logo image={picure} />
-          <Typography variant="h6" color="inherit" noWrap>
-            {this.props.title}
-          </Typography>
+          <div style={{ ..._styles.spaceBetween2 }}>
+            <Logo image={picure} />
+            <Typography variant="h6" color="inherit" noWrap>
+              {this.props.title}
+            </Typography>
+          </div>
           <div style={{ ..._styles.spaceBetween }}>
             <InputSearch getValueInput={this.getTextSearching} />
             <IconButton

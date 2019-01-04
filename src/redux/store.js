@@ -13,3 +13,33 @@ const store = createStore(
 //Poner en marcha las sagas
 
 export default store;
+
+export const globalStore = {
+  loginReducer: {
+    loggued: false,
+    load: false,
+    userId: ""
+  },
+  currentUserReducer: {
+    userFullName: "",
+    email: "",
+    active: false,
+    accessExpire: new Date(),
+    tokenGoogle: ""
+  },
+  magicTowsReducer: {
+    error: "",
+    fetching: false,
+    listTowns: [{}],
+    message: ""
+  }
+};
+
+/**
+ * obtenerCordenadas
+ * pueblos magicos
+ * hoteles
+ * restaurantes
+ * atracciones
+ * Mitos y Leyendas, ?
+ */

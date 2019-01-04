@@ -1,7 +1,8 @@
-import { makeAsyncActionCreator } from "redux-toolbelt";
+import { makeAsyncActionCreator, makeActionCreator } from "redux-toolbelt";
 import { fromJS } from "immutable";
 
 export const userLogin = makeAsyncActionCreator("USER_LOGIN");
+export const setNormalLogin = makeActionCreator("setLoginEmailPass");
 
 const initialState = fromJS({
   logged: false,
@@ -27,6 +28,9 @@ function loginReducer(state = initialState, action) {
         loading: false,
         error: action.payload
       });
+    }
+    case setNormalLogin.TYPE: {
+      return state.set("loading", true);
     }
     default:
       return initialState;

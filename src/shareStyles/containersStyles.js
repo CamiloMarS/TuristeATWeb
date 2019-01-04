@@ -20,5 +20,5 @@ export const menuOptions = {
 
 export const rootContent = {
   marginTop: "10vh",
-  backgroundColor: ""
-}
+  backgroundColor: "transparent"
+};

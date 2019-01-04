@@ -1,0 +1,17 @@
+.panelTop {
+  width: 100%;
+  height: 40vh;
+  background: #bdbdbd;
+}
+
+.contentCenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.panelTop:hover {
+  background: transparent;
+}

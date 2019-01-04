@@ -1,7 +1,7 @@
 .cardHotelRs {
   position: relative;
-  width:250px;
-  background: #ccc;
+  width: 250px;
+  background: rgb(235, 134, 134);
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 
 .cardHotelRs > div {
   position: absolute;
-  background: rgba(0,0,0,.4);
+  background: rgba(0, 0, 0, 0.4);
   min-height: 5vh;
   height: 6vh;
   width: 100%;
@@ -25,4 +25,5 @@
 
 .cardHRImage {
   width: 100%;
-  height: 100%;}
+  height: 100%;
+}
