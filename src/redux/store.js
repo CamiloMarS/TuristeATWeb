@@ -32,7 +32,10 @@ export const globalStore = {
     fetching: false,
     listTowns: [{}],
     message: ""
-  }
+  },
+  attractionsReducer: {},
+  hotelsRestaunrantReducer: {},
+  locationReducer: {}
 };
 
 /**
